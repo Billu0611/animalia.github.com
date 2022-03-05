@@ -1,0 +1,195 @@
+/* css Reset */
+*{
+    margin: 0;
+    padding:0;
+
+}
+/* Navigation Bar*/
+
+
+#navbar{
+    display: flex;
+    align-items: center;
+    height:125px;
+    
+    
+}
+#navbar h1{
+    height:43px;
+
+}
+/* Navigation Bar: logo and image */
+#logo{
+    margin: 20px 20px;
+    text-align: center;
+    color:brown;
+
+}
+#logo img{
+    margin: 5px 5px;
+    height: 10px;
+}
+
+/* Navigation bar: list styling*/
+#navbar{
+    position:relative;
+}
+#navbar ul{
+   display:flex;
+
+}
+#navbar::before{
+    content: " ";
+
+    background-color:rgba(248, 152, 173, 0.829);
+    position: absolute;
+    height:100%;
+    width:100%;
+    z-index: -1;
+    
+
+
+}
+#navbar ul li{
+   
+    list-style: none;
+    font-size: 1.3rem;
+}
+#navbar ul li a{
+    color: black;
+    display: block;
+    padding: 3px 80px;
+    border-radius: 5px;
+    text-decoration: none;
+
+}
+#navbar ul li a:hover,
+#navbar ul li a.active
+ {    
+    color: white;
+    background-color:black;
+    text-decoration: underline;
+}
+
+
+/*home section*/
+#Home {
+    display: flex;
+    flex-direction:column;
+    padding: 3px 200px;
+    height:500px;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+#Home::before {
+    content: "";
+    position: absolute;
+    background: url('../pet.jpg') ;
+   
+    height:80%;
+    width:100%;
+    z-index: -1;
+    opacity:0.6;
+    
+
+}
+#Home h1{
+    color:black;
+    text-align:center;
+}
+#Home p{
+    color: black;
+    text-align: center;
+    font-size:1.5rem;
+    
+}
+    
+    
+
+
+/*services center*/
+#services{
+    margin:20px;
+    display: flex;
+    
+
+}
+#services.box{
+    border : 2px solid black;
+    margin: 20px
+}
+#services.box img{
+    height:50px;
+    margin: auto;
+    display:block;
+    
+}
+
+
+/* client section*/
+#client-section{
+     height: 344px;
+}
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#clients img{
+    height:50px;
+
+}
+
+
+
+
+/*utility classes*/
+.h-primary{
+    font-size: 2.8rem;
+    padding:12px;
+    
+      
+}
+h.secondary{
+    font-size:1.5rem;
+    padding:12px;
+}
+.btn{
+    padding:10px 50px;
+    border:2px solid black;
+    background-color:black;
+    color:pink;
+    margin: 17px;
+    font-size:1.2rem;
+}
+.btn a:hover{
+    color:rgba(241, 92, 117, 0.63);
+    background:black;
+}
+.center{
+    text-align: center;
+
+}
+.btn a{
+    color:pink;
+}
+.container button{
+    color:black;
+    background-color:rgb(236, 134, 151);
+    padding:6px 20px;
+
+}
+.container button:hover{
+    color:rgb(236, 96, 119);
+    background-color:black;
+    border-color:black;
+}
+.services-container h1{
+font-size: 2rem;
+}
+
+
+

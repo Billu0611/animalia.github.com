@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Animalia.com</title>
+</head>
+<style>
+    /* css Reset */
+*{
+    margin: 0;
+    padding:0;
+
+}
+/* Navigation Bar*/
+
+
+#navbar{
+    display: flex;
+    align-items: center;
+    height:125px;
+    
+    
+}
+#navbar h1{
+    height:43px;
+
+}
+/* Navigation Bar: logo and image */
+#logo{
+    margin: 20px 20px;
+    text-align: center;
+    color:brown;
+
+}
+#logo img{
+    margin: 5px 5px;
+    height: 10px;
+}
+
+/* Navigation bar: list styling*/
+#navbar{
+    position:relative;
+}
+#navbar ul{
+   display:flex;
+
+}
+#navbar::before{
+    content: " ";
+
+    background-color:rgba(248, 152, 173, 0.829);
+    position: absolute;
+    height:100%;
+    width:100%;
+    z-index: -1;
+    
+
+
+}
+#navbar ul li{
+   
+    list-style: none;
+    font-size: 1.3rem;
+}
+#navbar ul li a{
+    color: black;
+    display: block;
+    padding: 3px 80px;
+    border-radius: 5px;
+    text-decoration: none;
+
+}
+#navbar ul li a:hover,
+#navbar ul li a.active
+ {    
+    color: white;
+    background-color:black;
+    text-decoration: underline;
+}
+
+
+/*home section*/
+#Home {
+    display: flex;
+    flex-direction:column;
+    padding: 3px 200px;
+    height:500px;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+#Home::before {
+    content: "";
+    position: absolute;
+    background: url('pet.jpg') ;
+   
+    height:80%;
+    width:100%;
+    z-index: -1;
+    opacity:0.6;
+    
+
+}
+#Home h1{
+    color:black;
+    text-align:center;
+}
+#Home p{
+    color: black;
+    text-align: center;
+    font-size:1.5rem;
+    
+}
+    
+    
+
+
+/*services center*/
+#services{
+    margin:20px;
+    display: flex;
+    
+
+}
+#services.box{
+    border : 2px solid black;
+    margin: 20px
+}
+#services.box img{
+    height:50px;
+    margin: auto;
+    display:block;
+    
+}
+
+
+/* client section*/
+#client-section{
+     height: 344px;
+}
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#clients img{
+    height:50px;
+
+}
+
+
+
+
+/*utility classes*/
+.h-primary{
+    font-size: 2.8rem;
+    padding:12px;
+    
+      
+}
+h.secondary{
+    font-size:1.5rem;
+    padding:12px;
+}
+.btn{
+    padding:10px 50px;
+    border:2px solid black;
+    background-color:black;
+    color:pink;
+    margin: 17px;
+    font-size:1.2rem;
+}
+.btn a:hover{
+    color:rgba(241, 92, 117, 0.63);
+    background:black;
+}
+.center{
+    text-align: center;
+
+}
+.btn a{
+    color:pink;
+}
+.container button{
+    color:black;
+    background-color:rgb(236, 134, 151);
+    padding:6px 20px;
+
+}
+.container button:hover{
+    color:rgb(236, 96, 119);
+    background-color:black;
+    border-color:black;
+}
+.services-container h1{
+font-size: 2rem;
+}
+
+
+
+
+    
+    .Home h1 {
+        margin: 34px;
+        height: 100px;
+
+    }
+
+    .Home p {
+        color: black;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+
+    .box img {
+        height: 110px;
+        margin: 10px;
+        display: block;
+
+    }
+
+    .box {
+        border: 1px solid black;
+        border-radius: 10px;
+        border-bottom-color: green;
+        margin: 10px;
+        padding: 20px 200px;
+        background-color: rgb(241, 173, 185);
+
+        display: flex;
+    }
+
+    /* client section*/
+    .contact img {
+        height: 300px;
+        width: 700px;
+
+    }
+
+    .container {
+        border: 2px solid rgb(236, 116, 136);
+        margin: 50px 350px;
+        padding: 100px 100px;
+        width: 33%;
+        border-radius: 2px;
+        color: black;
+        text-align: center;
+        background: url('dog.jpg');
+    }
+
+    .form-group input {
+        text-align: center;
+        display: block;
+        width: 300px;
+        padding: 1 px;
+        border: 2px solid rgb(235, 97, 120);
+        margin: 11px auto;
+        font-size: 18px;
+        border-radius: 0px;
+        color: rgb(245, 78, 106);
+    }
+
+    .container button {
+        display: block;
+        width: 74%;
+        margin: 20px auto;
+
+    }
+
+    .navbar ul li a:hover,
+    .navbar ul li a.active {
+        text-decoration: underline;
+        color: black;
+        color: white;
+        background-color: black;
+    }
+
+    .right {
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        display: inline-block;
+        border: 1px solid black;
+        padding: 40px 50px;
+        margin: 1px 10px;
+
+    }
+
+    .right img {
+        position: absolute;
+
+        width: 110px;
+        height: 90px;
+        filter: invert(100%);
+        margin: 2px;
+
+        right: 5px;
+        top: 5px;
+
+    }
+</style>
+
+<body>
+    </header>
+
+    <div class="right">
+        <image src="ngo.jpeg">
+
+    </div>
+    </header>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="logo (3).png" alt="Animalia.com" style="width:100px;
+            height:100px;">
+            <div>
+                <h1> Animalia.com</h1>
+            </div>
+        </div>
+        <ul>
+            <li class="item"><a href="new page.html" class="active"><strong>Home</strong></a></li>
+            <li class="item"><a href="about_us.html" target="_blank"><strong>About Us</strong></a></li>
+
+            <li class="item"><a href="our work.html"><strong>Our Work</strong></a></li>
+            
+
+        </ul>
+
+    </nav>
+
+    <section id="Home">
+        <h2 class="h-primary">Welcome to Animalia.com</h2>
+        <p> Animalia is a non-governmental organization.
+        </p>
+        <p> Here we provide shelter and nutritious food to stray and homeless animals in India.
+            While cattle, dogs and cats are the main categories of animals at our shelters, birds, white mice,
+            squirrels, horses, donkeys, deer and even a monitor lizard have temporary refuge with us.
+        </p>
+        <button class="btn"><a href="donate_us.html"> Donate here for the animals</a></button>
+
+
+    </section>
+    <section class="services-container">
+        <h1 class="h-primary center">Here How You Can Help...</h1>
+        <div class="services">
+            <div class="box">
+                <img src="adopt.png">
+                <h2 class="h-secondary center"> <br>You Can Adopt</h2>
+                <p class="center"><br> <br> "People that say money can't buy you happiness, have never paid adoption
+                    fee"<br> We would appreciate if you help these creatures in their nourishment.
+                    you can take them home and make a new family member by giving them a family.<br><br>For adoption you
+                    can visit our NGO.
+                </p>
+            </div>
+            <div class="box">
+                <img src="rescue.png">
+                <h2 class="h-secondary center"><br>You Can Drop</h2>
+                <p class="center"><br><br>"You can't buy love but you can rescue it"<br> You can drop the pets if found
+                    abandoned, injuried or alone.
+                    We here foster them with love and care.
+                </p>
+            </div>
+            <div class="box">
+                <img src="feed.png">
+                <h2 class="h-secondary center"><br>You Can Feed</h2>
+                <p class="center"><br><br>"Who feeds a hungry animal, feeds his own soul".
+                    <br> we provide you with opportunity to feed the pets. Bring healthy eatables
+                    for cute creatures.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container">
+            <h1>Contact Us For Any Query </h1>
+            <form action="Query_submission.html">
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Enter address">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Enter e-mail">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Enter your contact">
+                </div>
+                <button class="btn">Submit</button>
+            </form>
+
+        </div>
+    </section>
+    <div class="box">
+        Helpline number: +91 1800-202-7777 email: www.animalia202@gmail.com
+    </div>
+</body>
+
+</html>
